@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/form/create', [FormController::class, 'create'])->name('form.create');
 Route::post('/form/store', [FormController::class, 'store'])->name('form.store');
 Route::get('/form/index', [FormController::class, 'index'])->name('form.index');
+Route::get('/health', function() {
+    return response()->json(['status' => 'ok']);
+});
 // Route::get('/form/edit', [FormController::class, 'edit'])->name('form.edit');
 // Route::put('/form/update', [FormController::class, 'update'])->name('form.update');
 
